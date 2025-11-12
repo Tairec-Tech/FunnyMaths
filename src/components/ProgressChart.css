@@ -1,0 +1,74 @@
+.progress-chart {
+  background: rgba(15, 23, 32, 0.6);
+  border-radius: 18px;
+  padding: 1.5rem;
+  border: 1px solid rgba(99, 132, 165, 0.2);
+}
+
+.chart-title {
+  margin: 0 0 1.5rem;
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chart-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bar-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.bar-value {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.bar-container {
+  height: 32px;
+  background: rgba(99, 132, 165, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(99, 132, 165, 0.2);
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, rgba(99, 132, 165, 0.8), rgba(99, 132, 165, 0.6));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0.8rem;
+  animation: fillBar 1s ease-out both;
+  position: relative;
+  min-width: 40px;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0 !important;
+  }
+}
+
+.bar-percentage {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+

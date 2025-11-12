@@ -1,0 +1,19 @@
+# Habilitar CORS para desarrollo
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Habilitar reescritura de URLs (opcional)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+</IfModule>
+
+# Prevenir acceso directo a archivos de configuración
+<FilesMatch "^(config\.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
